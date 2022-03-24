@@ -3,7 +3,7 @@ server:
   
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:15432/ead-api
+    url: jdbc:postgresql://localhost:15432/ead-authuser
     username: postgres
     password: Postgres2019!
   jpa:
