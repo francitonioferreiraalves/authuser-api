@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  ead-authuser:
+  ead-api:
     image: postgres
     environment:
       POSTGRES_PASSWORD: "Postgres2019!"
@@ -20,7 +20,7 @@ services:
     ports:
       - "16543:80"
     depends_on:
-      - ead-authuser
+      - ead-api
     networks:
       - postgres-compose-network
 
