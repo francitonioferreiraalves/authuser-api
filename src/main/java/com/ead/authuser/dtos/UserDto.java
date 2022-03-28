@@ -1,5 +1,7 @@
 package com.ead.authuser.dtos;
 
+import java.util.UUID;
+
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -26,6 +28,8 @@ public class UserDto {
 		public static interface ImagePut {
 		}
 	}
+
+	private UUID userId;
 
 	@NotBlank(groups = UserView.RegistrationPost.class)
 	@Size(min = 4, max = 50, groups = UserView.RegistrationPost.class)
