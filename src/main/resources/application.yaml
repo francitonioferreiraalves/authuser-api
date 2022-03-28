@@ -14,6 +14,15 @@ spring:
         lob.non-contextual-creation: true
     properties: 
       hibernate:
-        show_sql: true
-        
-      
+        show_sql: true        
+  output:
+    ansi:
+      enabled:
+
+
+logging:
+  level:
+    com.ead: TRACE
+    root: INFO
+    org.springframework.web: DEBUG
+    org.hibernate: INFO
