@@ -1,5 +1,8 @@
 server:
   port: 8087
+  error:
+    include-stacktrace: never
+
   
 spring:
   datasource:
@@ -15,10 +18,6 @@ spring:
     properties: 
       hibernate:
         show_sql: true        
-  output:
-    ansi:
-      enabled:
-
 
 logging:
   level:
