@@ -1,10 +1,15 @@
 server:
   port: 8087
+  servlet:
+    context-path: '/ead-authuser/'
+
   error:
     include-stacktrace: never
-
-  
+    
 spring:
+  
+  application:
+    name: ead-authuser-service
   datasource:
     url: jdbc:postgresql://localhost:15432/ead-authuser
     username: postgres
@@ -15,18 +20,25 @@ spring:
       dialect: org.hibernate.dialect.PostgreSQLDialect
       jdbc:
         lob.non-contextual-creation: true
-    properties: 
+    properties:
       hibernate:
-        show_sql: true        
-
+        show_sql: true
+        
 logging:
   level:
     com.ead: TRACE
     root: INFO
     org.springframework.web: DEBUG
     org.hibernate: INFO
-    
+
 ead:
   api:
     url:
-      course: 'http://localhost:8082'
+      course: 'http://ead-course-service'
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: 'http://localhost:8761/eureka'
+  instance:
+    hostname: localhost
